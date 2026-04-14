@@ -1,1 +1,1 @@
-{"version":2,"defects":[],"times":{"Tests\\SocialiteTest::test_instance":0.045,"Tests\\SocialiteTest::test_redirect":0.01,"Tests\\SocialiteTest::test_user":0.012,"Tests\\SocialiteTest::test_with":0.003}}
+{"version":2,"defects":[],"times":{"Tests\\SocialiteTest::test_instance":0.043,"Tests\\SocialiteTest::test_redirect":0.005,"Tests\\SocialiteTest::test_user":0.003,"Tests\\SocialiteTest::test_with":0.003}}

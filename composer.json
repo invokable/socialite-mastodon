@@ -1,43 +1,69 @@
 {
-  "name": "revolution/socialite-mastodon",
-  "description": "Socialite for Mastodon",
-  "keywords": [
-    "mastodon",
-    "socialite",
-    "laravel"
-  ],
-  "license": "MIT",
-  "require": {
-    "php": "^8.0",
-    "ext-json": "*",
-    "laravel/socialite": "*"
-  },
-  "require-dev": {
-    "orchestra/testbench": "^9.0||^10.0",
-    "revolution/laravel-mastodon-api": "^3.1",
-    "laravel/pint": "^1.22"
-  },
-  "autoload": {
-    "psr-4": {
-      "Revolution\\Socialite\\Mastodon\\": "src"
+    "name": "revolution/socialite-mastodon",
+    "description": "Socialite for Mastodon",
+    "keywords": [
+        "mastodon",
+        "socialite",
+        "laravel"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.0",
+        "ext-json": "*",
+        "laravel/socialite": "*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^11.0",
+        "laravel/pint": "^1.22",
+        "revolution/laravel-boost-copilot-cli": "^2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Revolution\\Socialite\\Mastodon\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/",
+            "Workbench\\App\\": "workbench/app/",
+            "Workbench\\Database\\Factories\\": "workbench/database/factories/",
+            "Workbench\\Database\\Seeders\\": "workbench/database/seeders/"
+        }
+    },
+    "authors": [
+        {
+            "name": "kawax",
+            "email": "kawaxbiz@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Revolution\\Socialite\\Mastodon\\MastodonServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@clear",
+            "@prepare",
+            "@build"
+        ],
+        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
+        "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "build": "@php vendor/bin/testbench workbench:build --ansi",
+        "serve": [
+            "Composer\\Config::disableProcessTimeout",
+            "@build",
+            "@php vendor/bin/testbench serve --ansi"
+        ],
+        "lint": [
+            "@php vendor/bin/pint --ansi"
+        ],
+        "test": [
+            "@clear",
+            "@php vendor/bin/phpunit"
+        ],
+        "boost": "vendor/bin/testbench boost:install --no-interaction --ansi"
     }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Tests\\": "tests/"
-    }
-  },
-  "authors": [
-    {
-      "name": "kawax",
-      "email": "kawaxbiz@gmail.com"
-    }
-  ],
-  "extra": {
-    "laravel": {
-      "providers": [
-        "Revolution\\Socialite\\Mastodon\\MastodonServiceProvider"
-      ]
-    }
-  }
 }

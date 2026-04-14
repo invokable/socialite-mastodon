@@ -2,6 +2,7 @@
 
 namespace Tests;
 
+use Illuminate\Foundation\Application;
 use Laravel\Socialite\SocialiteServiceProvider;
 use Revolution\Socialite\Mastodon\MastodonServiceProvider;
 
@@ -18,7 +19,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
     /**
      * Define environment setup.
      *
-     * @param  \Illuminate\Foundation\Application  $app
+     * @param  Application  $app
      */
     protected function getEnvironmentSetUp($app): void
     {

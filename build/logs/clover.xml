@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1776163082">
-  <project timestamp="1776163082" name="Clover Coverage">
+<coverage generated="1776164791">
+  <project timestamp="1776164791" name="Clover Coverage">
     <package name="Revolution\Socialite\Mastodon">
-      <file name="/Users/logic/Sites/socialite-mastodon/src/MastodonProvider.php">
+      <file name="/home/runner/work/socialite-mastodon/socialite-mastodon/src/MastodonProvider.php">
         <class name="Revolution\Socialite\Mastodon\MastodonProvider" namespace="Revolution\Socialite\Mastodon">
           <metrics complexity="8" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="29" coveredstatements="29" elements="37" coveredelements="37"/>
         </class>
@@ -45,7 +45,7 @@
         <line num="110" type="stmt" count="3"/>
         <metrics loc="113" ncloc="85" classes="1" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="29" coveredstatements="29" elements="37" coveredelements="37"/>
       </file>
-      <file name="/Users/logic/Sites/socialite-mastodon/src/MastodonServiceProvider.php">
+      <file name="/home/runner/work/socialite-mastodon/socialite-mastodon/src/MastodonServiceProvider.php">
         <class name="Revolution\Socialite\Mastodon\MastodonServiceProvider" namespace="Revolution\Socialite\Mastodon">
           <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
         </class>

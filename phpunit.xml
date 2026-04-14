@@ -9,11 +9,6 @@
             <directory>src/</directory>
         </include>
     </source>
-    <coverage>
-        <report>
-            <clover outputFile="build/logs/clover.xml"/>
-        </report>
-    </coverage>
     <testsuites>
         <testsuite name="Test Suite">
             <directory>tests</directory>

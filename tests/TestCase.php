@@ -29,15 +29,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
                 'client_secret' => 'test',
                 'redirect' => 'https://localhost',
                 'domain' => 'http://localhost',
-            ]
+            ],
         );
-
-        // Setup default database to use sqlite :memory:
-        $app['config']->set('database.default', 'testbench');
-        $app['config']->set('database.connections.testbench', [
-            'driver' => 'sqlite',
-            'database' => ':memory:',
-            'prefix' => '',
-        ]);
     }
 }
